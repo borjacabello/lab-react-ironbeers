@@ -1,8 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import beersImg from "../assets/beers.png"
 import randomImg from "../assets/random-beer.png"
 import newImg from "../assets/new-beer.png"
+import ListBeers from "./ListBeers";
 
 function Home() {
   return (
@@ -46,6 +47,8 @@ function Home() {
           lobortis rhoncus. Donec pretium varius vulputate.
         </p>
       </Link>
+
+      
     </div>
   );
 }
