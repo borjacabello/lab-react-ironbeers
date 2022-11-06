@@ -66,7 +66,7 @@ function ListBeers() {
                 <h4 style={{ color: "gray" }}>{eachBeer.tagline}</h4>
                 <p>
                   <span>Created by: </span>
-                  {eachBeer.contributed_by.replace(eachBeer.contributed_by.slice(eachBeer.contributed_by.indexOf(" <")),"")}
+                  {eachBeer.contributed_by}
                 </p>
               </div>
             </div>
