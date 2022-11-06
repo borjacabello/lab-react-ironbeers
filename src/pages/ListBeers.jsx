@@ -7,13 +7,11 @@ import homeImg from "../assets/home.png";
 
 function ListBeers() {
   const [list, setList] = useState([]);
-  const [listToShow, setListToShow] = useState([])
   const [isFetching, setIsFetching] = useState(true);
   const [searchInput, setSearchInput] = useState("")
 
   useEffect(() => {
     getData();
-    //handleSearch()
   }, []);
 
   const getData = async () => {
@@ -34,8 +32,8 @@ function ListBeers() {
       setSearchInput(event.target.value)
       const queryAPI = await axios.get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${event.target.value}`)
 
-      setListToShow(queryAPI)
-      setIsFetching(false);
+      setList(queryAPI.data)
+      
     } catch(error) {
       console.log(error);
     }
